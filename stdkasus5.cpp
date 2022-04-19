@@ -42,3 +42,25 @@ void proses::hitung(){
 int proses::ambil_matkul(int x){
   if (x==0){
     cout << "Jumlah keseluruhan sks : " << hasil;
+return hasil;
+  }
+  else{
+
+    cout << "Masukkan jumlah SKS yang akan diambil : ";
+    cin >> sks;
+    cout << "Masukkan nama mata kuliah yang akan diambil : ";
+    cin >> matkul;
+    hasil=hasil+sks;
+    
+    return ambil_matkul(x-1);
+  }
+  
+}
+
+int main() {
+  int x;
+  proses p;
+  cout << "Studi Kasus Biaya SKS Pertemuan 5" << endl;
+  p.hitung();
+  return 0;
+}
